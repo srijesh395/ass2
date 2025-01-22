@@ -94,25 +94,70 @@
 // console.log(user1.name);
 // console.log(user2.name);
 
-let userDetails =[
-  {
-      name:"sathvik",
-      city:"Karimnagar"
-  },
-  {
-      name:"Raghu",
-      city:"ananthpur"
-  },
-  {
-      name:"Shilpa",
-      city:"Kammam"
-  },
-  {
-      name:"Bharath",
-      city:"Sathupalli"
-  }
-];
+//let userDetails =[
+  //{
+    //  name:"sathvik",
+      //city:"Karimnagar"
+  //},
+  //{
+    //  name:"Raghu",
+      //city:"ananthpur"
+  //},
+  //{
+      //name:"Shilpa",
+      //city:"Kammam"
+  //},
+  //{
+    //  name:"Bharath",
+  //    city:"Sathupalli"
+ // }
+//];
 
-userDetails.map((user)=>{
-console.log(user.name);
-})
+//userDetails.map((user)=>{
+//console.log(user.name);
+//})
+
+//let userData ={
+ //   name:"sathvik",
+  //  age:25,
+  //  city:"karimnagar"
+//};
+//console.log(userData.name , typeof(userData));
+
+//let x = JSON.stringify(userData);
+//console.log(x , typeof(x));
+
+//let y = JSON.parse(x);
+//console.log(y);
+
+//let p1 = new Promise((resolve , reject)=>{})
+//console.log(p1);
+
+//let p2 = new Promise((resolve , reject)=>{
+  //resolve("success");
+//});
+//console.log(p2);
+
+
+//let p3 = new Promise((resolve , reject)=>{
+ // reject("Failures");
+//})
+
+//p3
+//.then(res=>console.log(res))
+//.catch(err=>console.log(err))
+//.finally(()=>console.log("final"))
+
+function fetchUsers(){
+  let response = fetch("http://jsonplaceholder.typicode.com/users");
+  response.then(res=>{
+    return res.json().then(data=>{
+      console.log(data);
+    })
+  })
+  .catch(err=>console.log(err))
+}
+fetchUsers();
+
+
+
