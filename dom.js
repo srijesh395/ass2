@@ -20,7 +20,21 @@
 //console.log(ele);
 //let ele = document.querySelector(".test");
 //console.log(ele);
- let ele = document.querySelectorAll(".test");
- console.log(ele);
+ //let ele = document.querySelectorAll(".test");
+//  console.log(ele);
+
+let bgcolor = document.querySelectorAll(".bgcolor");
+//console.log(bgcolor);
+[...bgcolor].map(element=>{
+  //console.log(element);
+  element.addEventListener("mouseover",()=>{
+    //console.log(element.innerText);
+    element.computedStyleMap.backgroundcolor = element.innerText;
+  })
+  element.addEventListener("mouseleave",()=>{
+    //console.log(element.innerText);
+    element.computedStyleMap.backgroundcolor = "transparent"
+  })
+})
 
 
